@@ -41,14 +41,10 @@ namespace Lab_02_1program
                 }
                 else if (coefficient_a == 0)
                 {
-                    if (coefficient_с != 0 && coefficient_b == 0)
+                    if (coefficient_b != 0 && coefficient_с != 0)
                     {
-                        Console.WriteLine("This equation doesn't have decisions");
-                        Console.ReadKey();
-                    }
-                    else if (coefficient_b == 0 && coefficient_с == 0)
-                    {
-                        Console.WriteLine("This equation doesn't have decisions");
+                        unknown_x_1 = -1 * (coefficient_с / coefficient_b);
+                        Console.WriteLine($"The result is x = {unknown_x_1}");
                         Console.ReadKey();
                     }
                     else if (coefficient_b != 0 && coefficient_с == 0)
@@ -57,27 +53,53 @@ namespace Lab_02_1program
                         Console.WriteLine($"The result is x = {unknown_x_1}");
                         Console.ReadKey();
                     }
-                    else if (coefficient_b != 0 && coefficient_с != 0)
+                    else
                     {
-                        unknown_x_1 = -1 * (coefficient_с / coefficient_b);
-                        Console.WriteLine($"The result is x = {unknown_x_1}");
+                        Console.WriteLine("This equation doesn't have decisions");
                         Console.ReadKey();
                     }
                 }
                 else if (coefficient_b == 0)
                 {
-
-                    unknown_x_1 = Math.Sqrt(Math.Abs(-1 * (coefficient_с / coefficient_a)));
-                    double unknown_x_2 = -1*(Math.Sqrt(Math.Abs(-1 * (coefficient_с / coefficient_a))));
-                    Console.WriteLine($"The results are x1 = {unknown_x_1}\nx2 = {unknown_x_2}");
-                    Console.ReadKey();
+                    if (coefficient_a != 0 && coefficient_с != 0)
+                    {
+                        unknown_x_1 = Math.Sqrt(Math.Abs(-1 * (coefficient_с / coefficient_a)));
+                        double unknown_x_2 = -1 * (Math.Sqrt(Math.Abs(-1 * (coefficient_с / coefficient_a))));
+                        Console.WriteLine($"The results are x1 = {unknown_x_1}\nx2 = {unknown_x_2}");
+                        Console.ReadKey();
+                    }
+                    else if (coefficient_a != 0 && coefficient_с == 0)
+                    {
+                        unknown_x_1 = 0;
+                        Console.WriteLine($"The result is x = {unknown_x_1}");
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Console.WriteLine("This equation doesn't have decisions");
+                        Console.ReadKey();
+                    }
                 }
                 else if (coefficient_с == 0)
                 {
-                    unknown_x_1 = 0;
-                    double unknown_x_2 = -1 * (coefficient_b / coefficient_a);
-                    Console.WriteLine($"The results are x1 = {unknown_x_1}\nx2 = {unknown_x_2}");
-                    Console.ReadKey();
+                    if (coefficient_a != 0 && coefficient_b != 0)
+                    {
+                        unknown_x_1 = 0;
+                        double unknown_x_2 = -1 * (coefficient_b / coefficient_a);
+                        Console.WriteLine($"The results are x1 = {unknown_x_1}\nx2 = {unknown_x_2}");
+                        Console.ReadKey();
+                    }
+                    else if (coefficient_a == 0 || coefficient_b == 0)
+                    {
+                        unknown_x_1 = 0;
+                        Console.WriteLine($"The result is x = {unknown_x_1}");
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Console.WriteLine("This equation doesn't have decisions");
+                        Console.ReadKey();
+                    }
                 }
             }
             catch
