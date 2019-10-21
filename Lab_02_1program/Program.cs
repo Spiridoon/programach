@@ -8,6 +8,7 @@ namespace Lab_02_1program
         {
             try
             {
+                Console.Clear();
                 Console.WriteLine("Write a, b and c for equation ax^2+bx+c = 0");
                 Console.Write("a = ");
                 float coefficient_a = Convert.ToSingle(Console.ReadLine());
@@ -106,6 +107,7 @@ namespace Lab_02_1program
             {
                 Console.WriteLine("Oops.. that's error. Try again");
                 Console.ReadKey();
+                Program.Main(args);
             }
         }
     }
