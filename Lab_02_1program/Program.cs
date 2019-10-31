@@ -34,7 +34,7 @@ namespace Lab_02_1program
                     }
                     else if (D > 0)
                     {
-                        unknown_x_1 = (1*-coefficient_b + Math.Sqrt(D)) / (2 * coefficient_a);
+                        unknown_x_1 = (-1*coefficient_b + Math.Sqrt(D)) / (2 * coefficient_a);
                         double unknown_x_2 = (-1*coefficient_b - Math.Sqrt(D)) / (2 * coefficient_a);
                         Console.WriteLine($"The results are x1 = {unknown_x_1}\nx2 = {unknown_x_2}");
                         Console.ReadKey();
