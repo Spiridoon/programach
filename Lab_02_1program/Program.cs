@@ -23,7 +23,7 @@ namespace Lab_02_1program
                     Console.WriteLine(D);
                     if (D < 0)
                     {
-                        Console.WriteLine($"The result is {coefficient_a}x^2 + {coefficient_b}x + {coefficient_с} = 0;");
+                        Console.WriteLine($"The result is x+yi\nx-yi");
                         Console.ReadKey();
                     }
                     else if (D == 0)
